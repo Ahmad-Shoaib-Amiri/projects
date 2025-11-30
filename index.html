@@ -1,2 +1,473 @@
-<h1>Hello World</h1>
-<h2>Bye world</h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: "480px",
+            md: "786px",
+            lg: "976px",
+            xl: "1440px",
+          },
+          extend: {
+            letterSpacing: {
+              widest: ".3rem",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="input.css" />
+    <title>My Studio</title>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section id="hero">
+      <!-- hero container -->
+      <div class="container max-w-6xl mx-auto px-6 py-12">
+        <!-- Menu/logo container -->
+        <nav class="flex items-center justify-between font-bold text-white">
+          <img src="images/logo.svg" alt="" />
+          <!-- menu -->
+          <div class="hidden h-10 font-sans md:flex md:space-x-8">
+            <div class="group">
+              <a href="#">About</a>
+              <div
+                class="mx-2 group-hover:border-b group-hover:border-blue-50"
+              ></div>
+            </div>
+
+            <div class="group">
+              <a href="#">Careers</a>
+              <div
+                class="mx-2 group-hover:border-b group-hover:border-blue-50"
+              ></div>
+            </div>
+
+            <div class="group">
+              <a href="#">Events</a>
+              <div
+                class="mx-2 group-hover:border-b group-hover:border-blue-50"
+              ></div>
+            </div>
+
+            <div class="group">
+              <a href="#">Products</a>
+              <div
+                class="mx-2 group-hover:border-b group-hover:border-blue-50"
+              ></div>
+            </div>
+
+            <div class="group">
+              <a href="#">About Developer</a>
+              <div
+                class="mx-2 group-hover:border-b group-hover:border-blue-50"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="md:hidden">
+            <button
+              id="menu-btn"
+              type="button"
+              class="open z-40 block hamburger md:hidden focus:outline-none"
+            >
+              <span class="hamburger-top"></span>
+              <span class="hamburger-middle"></span>
+              <span class="hamburger-bottom"></span>
+            </button>
+          </div>
+        </nav>
+
+        <!-- Mobile menu -->
+        <div
+          class="max-w-lg mt-32 mb-32 font-sans text-4xl text-white uppercase border-2 md:p-10 md:m-32 md:mx-0 md:text-6xl"
+        >
+          Impressive Esperiences That Deliver
+        </div>
+      </div>
+    </section>
+    <!-- Feature Section -->
+    <section id="feature">
+      <!-- feature container -->
+      <div
+        class="relative container flex flex-col max-w-6xl mx-auto my-32 px-6 text-gray-900 md:flex-row md:px-0"
+      >
+        <!-- image -->
+        <img src="images/desktop/image-interactive.jpg" alt="" />
+        <!-- text container -->
+        <div
+          class="top-48 pr-0 bg-white md:absolute md:right-0 md:py-20 md:pl-20"
+        >
+          <h2
+            class="max-w-lg mt-10 mb-6 font-sans text-4xl text-center text-gray-900 uppercase md:text-5xl md:mt-0 md:text-left"
+          >
+            The laeder in interactive vr
+          </h2>
+          <p class="max-w-md text-center md:text-left">
+            Founded in 2025, SI Inc. has been producing world-class virtual
+            reality projects for same of the best companies around the globe.
+            Our award-winning creations have transformed budiness through
+            digital experiences that to their brand.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- creation section -->
+    <section id="creation">
+      <div class="container max-w-6xl mx-auto my-32 px-6 text-gray-900 md:px-0">
+        <!-- creation heading -->
+        <div class="flex justify-center mb-20 md:justify-between">
+          <h2 class="text-4xl text-center uppercase md:text-left md:text-5xl">
+            our creations
+          </h2>
+          <button
+            class="hidden btn px-10 py-2 my-0 font-bold tracking-widest uppercase border-2 border-black hover:bg-black hover:text-white md:block"
+          >
+            See All
+          </button>
+        </div>
+
+        <!-- Items content -->
+        <div
+          class="flex flex-col justify-between w-full space-y-6 text-2xl text-white uppercase md:flex-row md:space-y-0 md:space-x-8"
+        >
+          <!-- item 1 -->
+          <div class="group item relative overflow-hidden md:w-1/4">
+            <!-- desktop image -->
+            <img
+              src="images/desktop/image-deep-earth.jpg"
+              alt=""
+              class="hidden w-full duration-200 md:block group-hover:scale-110"
+            />
+            <!-- mobile image -->
+            <img
+              src="images/mobile/image-deep-earth.jpg"
+              alt=""
+              class="md:hidden w-full"
+            />
+            <!-- item gradient -->
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+
+            <!-- item text -->
+            <h5
+              class="absolute px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black"
+            >
+              Deep Earth
+            </h5>
+          </div>
+
+          <!-- item 2 -->
+          <div class="group item relative overflow-hidden md:w-1/4">
+            <!-- desktop image -->
+            <img
+              src="images/desktop/image-night-arcade.jpg"
+              alt=""
+              class="hidden w-full duration-200 md:block group-hover:scale-110"
+            />
+            <!-- mobile image -->
+            <img
+              src="images/mobile/image-night-arcade.jpg"
+              alt=""
+              class="md:hidden w-full"
+            />
+            <!-- item gradient -->
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+
+            <!-- item text -->
+            <h5
+              class="absolute px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black"
+            >
+              Night Arcade
+            </h5>
+          </div>
+
+          <!-- item 3 -->
+          <div class="group item relative overflow-hidden md:w-1/4">
+            <!-- desktop image -->
+            <img
+              src="images/desktop/image-soccer-team.jpg"
+              alt=""
+              class="hidden w-full duration-200 md:block group-hover:scale-110"
+            />
+            <!-- mobile image -->
+            <img
+              src="images/mobile/image-soccer-team.jpg"
+              alt=""
+              class="md:hidden w-full"
+            />
+            <!-- item gradient -->
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+
+            <!-- item text -->
+            <h5
+              class="absolute px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black"
+            >
+              Soccer Team VR
+            </h5>
+          </div>
+
+          <!-- item 4 -->
+          <div class="group item relative overflow-hidden md:w-1/4">
+            <!-- desktop image -->
+            <img
+              src="images/desktop/image-grid.jpg"
+              alt=""
+              class="hidden w-full duration-200 md:block group-hover:scale-110"
+            />
+            <!-- mobile image -->
+            <img
+              src="images/mobile/image-grid.jpg"
+              alt=""
+              class="md:hidden w-full"
+            />
+            <!-- item gradient -->
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+
+            <!-- item text -->
+            <h5
+              class="absolute px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black"
+            >
+              The Grid
+            </h5>
+          </div>
+        </div>
+
+        <!-- items content 2 -->
+        <div
+          class="flex flex-col justify-between mt-10 w-full space-y-6 text-2xl text-white uppercase md:flex-row md:space-y-0 md:space-x-8"
+        >
+          <!-- item 1 -->
+          <div class="group item relative overflow-hidden md:w-1/4">
+            <!-- desktop image -->
+            <img
+              src="images/desktop/image-from-above.jpg"
+              alt=""
+              class="hidden w-full duration-200 md:block group-hover:scale-110"
+            />
+            <!-- mobile image -->
+            <img
+              src="images/mobile/image-from-above.jpg"
+              alt=""
+              class="md:hidden w-full"
+            />
+            <!-- item gradient -->
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+
+            <!-- item text -->
+            <h5
+              class="absolute px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black"
+            >
+              From Up Above VR
+            </h5>
+          </div>
+
+          <!-- item 2 -->
+          <div class="group item relative overflow-hidden md:w-1/4">
+            <!-- desktop image -->
+            <img
+              src="images/desktop/image-pocket-borealis.jpg"
+              alt=""
+              class="hidden w-full duration-200 md:block group-hover:scale-110"
+            />
+            <!-- mobile image -->
+            <img
+              src="images/mobile/image-pocket-borealis.jpg"
+              alt=""
+              class="md:hidden w-full"
+            />
+            <!-- item gradient -->
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+
+            <!-- item text -->
+            <h5
+              class="absolute px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black"
+            >
+              Pocket Borealis VR
+            </h5>
+          </div>
+
+          <!-- item 3 -->
+          <div class="group item relative overflow-hidden md:w-1/4">
+            <!-- desktop image -->
+            <img
+              src="images/desktop/image-curiosity.jpg"
+              alt=""
+              class="hidden w-full duration-200 md:block group-hover:scale-110"
+            />
+            <!-- mobile image -->
+            <img
+              src="images/mobile/image-curiosity.jpg"
+              alt=""
+              class="md:hidden w-full"
+            />
+            <!-- item gradient -->
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+
+            <!-- item text -->
+            <h5
+              class="absolute px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black"
+            >
+              The Curiosity
+            </h5>
+          </div>
+
+          <!-- item 4 -->
+          <div class="group item relative overflow-hidden md:w-1/4">
+            <!-- desktop image -->
+            <img
+              src="images/desktop/image-fisheye.jpg"
+              alt=""
+              class="hidden w-full duration-200 md:block group-hover:scale-110"
+            />
+            <!-- mobile image -->
+            <img
+              src="images/mobile/image-fisheye.jpg"
+              alt=""
+              class="md:hidden w-full"
+            />
+            <!-- item gradient -->
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+
+            <!-- item text -->
+            <h5
+              class="absolute px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black"
+            >
+              Make it Fisheye
+            </h5>
+          </div>
+        </div>
+
+        <div class="flex justify-center mt-10 md:hidden">
+          <button
+            class="w-full md:hidden px-40 py-2 my-0 font-bold tracking-widest uppercase border-2 border-black hover:bg-black hover:text-white"
+          >
+            See All
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-black">
+      <!-- container -->
+      <div class="container maz-w-6xl py-10 mx-auto">
+        <!-- footer flex container -->
+        <div
+          class="flex flex-col items-center mb-8 space-y-6 md:flex-row md:space-y-0 md:justify-between md:items-start"
+        >
+          <!-- logo contianer-->
+          <div
+            class="flex flex-col items-center space-y-8 md:items-start md:space-y-4"
+          >
+            <div class="h-8">
+              <img src="images/logo.svg" alt="" class="w-44 md:ml-3" />
+            </div>
+            <!-- menu container -->
+            <div
+              class="flex flex-col items-center space-y-4 font-bold text-white md:flex-row md:space-y-0 md:space-x-6 md:ml-3"
+            >
+              <!-- item 1  -->
+              <div class="h-10 group">
+                <a href="#">About</a>
+                <div
+                  class="mx-2 group-hover:border-b group-hover:border-blue-50"
+                ></div>
+              </div>
+
+              <!-- item 2  -->
+              <div class="h-10 group">
+                <a href="#">Careers</a>
+                <div
+                  class="mx-2 group-hover:border-b group-hover:border-blue-50"
+                ></div>
+              </div>
+
+              <!-- item 3  -->
+              <div class="h-10 group">
+                <a href="#">Events</a>
+                <div
+                  class="mx-2 group-hover:border-b group-hover:border-blue-50"
+                ></div>
+              </div>
+
+              <!-- item 4  -->
+              <div class="h-10 group">
+                <a href="#">Products</a>
+                <div
+                  class="mx-2 group-hover:border-b group-hover:border-blue-50"
+                ></div>
+              </div>
+
+              <!-- item 5  -->
+              <div class="h-10 group">
+                <a href="#">About Developer</a>
+                <div
+                  class="mx-2 group-hover:border-b group-hover:border-blue-50"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <!-- social copy right -->
+          <div
+            class="flex flex-col items-start justify-between space-y-4 text-gray-500"
+          >
+            <!-- icons container -->
+            <div
+              class="flex items-center justify-center space-x-4 md:justify-end mx-auto md:mx-0"
+            >
+              <!-- icon 1 -->
+              <div class="h-8 group">
+                <a href="#">
+                  <img src="images/icon-facebook.svg" alt="" class="h-6" />
+                </a>
+              </div>
+              <!-- icon 2 -->
+              <div class="h-8 group">
+                <a href="#">
+                  <img src="images/icon-twitter.svg" alt="" class="h-6" />
+                </a>
+              </div>
+
+              <!-- icon 3 -->
+              <div class="h-8 group">
+                <a href="#">
+                  <img src="images/icon-pinterest.svg" alt="" class="h-6" />
+                </a>
+              </div>
+              <!-- icon 4 -->
+              <div class="h-8 group">
+                <a href="#">
+                  <img src="images/icon-instagram.svg" alt="" class="h-6" />
+                </a>
+              </div>
+            </div>
+            <!-- copy -->
+            <div class="font-bold">&copy; 2025 SI Inc. All Rights Reserved</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
